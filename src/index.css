@@ -1,0 +1,21 @@
+@import '/src/styles/vars.css';
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 62.5%;
+	line-height: 24px;
+	font-weight: 400;
+	color: var(--clr-primary-font);
+	background-color: var(--clr-background);
+}
+
+.input {
+	padding: 0 8px;
+	border: 1px solid var(--clr-background);
+	border-radius: 6px;
+}

@@ -1,0 +1,17 @@
+.header__user_container {
+	align-self: center;
+	justify-self: end;
+	grid-area: 1 / 6 / 2 / 7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 35px;
+	height: 35px;
+	background-color: var(--clr-white);
+	border-radius: 100%;
+}
+
+.header__user_container:hover {
+	cursor: pointer;
+	border: 1px solid var(--clr-secondary-font);
+}
