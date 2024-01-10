@@ -24,6 +24,7 @@
 	font-weight: 500;
 	font-size: 1.8rem;
 	padding-right: 40px;
+	transition: all ease 0.2s;
 }
 
 .header__input:focus {
@@ -45,7 +46,7 @@
 }
 
 @media (max-width: 700px) {
-	.header__input {
+	.input.header__input {
 		font-size: 1.6rem;
 	}
 }

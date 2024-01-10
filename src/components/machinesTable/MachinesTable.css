@@ -1,0 +1,31 @@
+.machines_table {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	width: 100%;
+	max-width: 1200px;
+	min-height: 480px;
+	max-height: 700px;
+	padding: 0px 6px 0px 0px;
+	border-radius: 6px 0px 0px 0px;
+	overflow-y: auto;
+}
+
+.machines_table::-webkit-scrollbar {
+	width: 8px;
+	cursor: pointer;
+}
+
+.machines_table::-webkit-scrollbar-track {
+	background: var(--clr-white);
+	border-radius: 10px;
+}
+
+.machines_table::-webkit-scrollbar-thumb {
+	background: var(--clr-secondary-font);
+	border-radius: 10px;
+}
+
+.machines_table::-webkit-scrollbar-thumb:hover {
+	background: var(--clr-primary-font);
+}

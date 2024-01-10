@@ -1,5 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { Header } from '../components/navbar/Header';
+import { MachinesSearch } from './pages/MachinesSearch';
 
 function App() {
 	return (
@@ -11,7 +12,7 @@ function App() {
 						path={'/'}
 						element={<Navigate to={'/machines'} replace={true} />}
 					/>
-					<Route path={'/machines'} element={<p>test page 1</p>} />
+					<Route path={'/machines'} element={<MachinesSearch />} />
 					<Route path={'/machines/:id'} element={<p>test page 2</p>} />
 				</Routes>
 			</BrowserRouter>

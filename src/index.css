@@ -1,4 +1,13 @@
-@import '/src/styles/vars.css';
+:root {
+	--clr-header: #4980cc;
+	--clr-primary-font: #3d3c3c;
+	--clr-search-icon: #706f6f;
+	--clr-secondary-font: #8a8888;
+	--clr-white: #ffffff;
+	--clr-background: #e4e4e4;
+	--clr-state-stoped: #e13e5b;
+	--clr-state-moving: #278e06;
+}
 
 * {
 	margin: 0;
@@ -18,4 +27,11 @@ html {
 	padding: 0 8px;
 	border: 1px solid var(--clr-background);
 	border-radius: 6px;
+}
+
+.main_container {
+	display: flex;
+	margin: 50px 20px;
+	justify-content: center;
+	height: 100%;
 }
