@@ -29,3 +29,18 @@
 .machines_table::-webkit-scrollbar-thumb:hover {
 	background: var(--clr-primary-font);
 }
+
+.machines_table__emptyResult {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 200px;
+	max-height: 80px;
+	padding: 12px;
+	border-radius: 8px;
+	background-color: var(--clr-white);
+	font-size: 1.8rem;
+	text-align: center;
+	transition: all ease 0.2s;
+}

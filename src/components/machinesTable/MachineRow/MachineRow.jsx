@@ -1,7 +1,6 @@
 import './MachineRow.css';
 
 function MachineRow({ machine }) {
-	console.log(machine);
 	return (
 		<div className='machine_row'>
 			<p className='machine_row__id'>({machine.id})</p>

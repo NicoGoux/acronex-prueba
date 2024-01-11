@@ -1,12 +1,20 @@
 import { MachineRow } from './MachineRow/MachineRow';
 import './MachinesTable.css';
 
-function MachinesTable({ machinesList }) {
+function MachinesTable({ searchResults }) {
 	return (
 		<div className='machines_table'>
-			{machinesList.map((machine) => (
-				<MachineRow key={machine.id} machine={machine} />
-			))}
+			{searchResults && searchResults.length != 0 ? (
+				<>
+					{searchResults.map((machine) => (
+						<MachineRow key={machine.id} machine={machine} />
+					))}
+				</>
+			) : (
+				<div className='machines_table__emptyResult'>
+					<p>No se encontraton máquinas con la descripción ingresada</p>
+				</div>
+			)}
 		</div>
 	);
 }

@@ -23,6 +23,7 @@
 }
 
 .machine_row__id {
+	width: 60px;
 	color: var(--clr-secondary-font);
 }
 
@@ -31,8 +32,8 @@
 }
 
 .machine_row__status_circle {
-	width: 30px;
-	height: 30px;
+	min-width: 30px;
+	min-height: 30px;
 	background-color: var(--clr-state-stoped);
 	border-radius: 100%;
 }
