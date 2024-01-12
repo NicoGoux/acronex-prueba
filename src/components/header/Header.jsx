@@ -5,11 +5,11 @@ import { HeaderUser } from './headerUser/HeaderUser';
 import { HeaderInput } from './headerInput/HeaderInput';
 import './Header.css';
 
-function Header({ setQuery }) {
+function Header() {
 	return (
 		<header className='header'>
 			<HeaderLogo />
-			<HeaderInput setQuery={setQuery} />
+			<HeaderInput />
 			<HeaderUser />
 		</header>
 	);

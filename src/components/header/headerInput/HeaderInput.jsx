@@ -2,20 +2,22 @@ import { useRef } from 'react';
 import './HeaderInput.css';
 import { useNavigate } from 'react-router-dom';
 
-function HeaderInput({ setQuery }) {
+function HeaderInput() {
 	const navigate = useNavigate();
 	const input = useRef();
 
 	const onKeyDown = (event) => {
 		if (event.key === 'Enter') {
-			navigate('/machines');
-			setQuery(event.target.value);
+			event.target.value != ''
+				? navigate(`/machines?q=${event.target.value}`)
+				: navigate(`/machines`);
 		}
 	};
 
 	const onClickSearchIcon = () => {
-		navigate('/machines');
-		setQuery(input.current.value);
+		input.current.value != ''
+			? navigate(`/machines?q=${input.current.value}`)
+			: navigate(`/machines`);
 	};
 
 	return (

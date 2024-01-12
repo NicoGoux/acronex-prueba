@@ -8,8 +8,9 @@ function useGetMachines(queryParams) {
 		setLoading(true);
 		const getMachines = async () => {
 			try {
+				const queryString = queryParams ? queryParams : '';
 				const response = await fetch(
-					`https://wrk.acronex.com/api/challenge/machines?q=${queryParams}`,
+					`https://wrk.acronex.com/api/challenge/machines?q=${queryString}`,
 				);
 
 				/**
