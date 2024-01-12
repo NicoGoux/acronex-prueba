@@ -11,7 +11,7 @@ function MachinesTable({ searchResults }) {
 					))}
 				</>
 			) : (
-				<div className='machines_table__emptyResult'>
+				<div className='machines_table__empty_result'>
 					<p>No se encontraton máquinas con la descripción ingresada</p>
 				</div>
 			)}

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import { Header } from '../components/navbar/Header';
-import { MachinesSearch } from './pages/MachinesSearch';
+import { Header } from '../components/header/Header';
+import { MachinesSearchPage } from './pages/MachinesSearchPage';
+import { MachineDetailPage } from './pages/MachineDetailPage';
 
 function App() {
 	const [query, setQuery] = useState('');
@@ -17,9 +18,9 @@ function App() {
 					/>
 					<Route
 						path={'/machines'}
-						element={<MachinesSearch query={query} />}
+						element={<MachinesSearchPage query={query} />}
 					/>
-					<Route path={'/machines/:id'} element={<p>test page 2</p>} />
+					<Route path={'/machines/:id'} element={<MachineDetailPage />} />
 				</Routes>
 			</BrowserRouter>
 		</>

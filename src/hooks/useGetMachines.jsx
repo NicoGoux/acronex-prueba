@@ -24,15 +24,16 @@ function useGetMachines(queryParams) {
 
 				const results = await response.json();
 				/**
-				 * En caso de que se busque por un id especifico (lo que devuelve
-				 * un objecto en lugar de un array), se coloca el objeto dentro de
-				 * un array vacio para que sea mostrado en la tabla de maquinas.
+				 * En caso de que se busque por un id especifico se devolvera un objeto como si estuviera
+				 * consultandose al endpoint /acronex/:id. Se tomo la decision de, si se presenta este caso,
+				 * colocar el objeto dentro de un array vacio para que sea mostrado en la tabla de maquinas
+				 * como si se tratara de un filtrado por descripcion.
 				 */
 				const searchResults = Array.isArray(results) ? results : [results];
 				setSearchResults(searchResults);
 			} catch (error) {
 				console.log(error);
-				console.error('No se pudo obtener el listado de maquinas');
+				console.error('No se encontraton máquinas con la descripción ingresada');
 				setSearchResults([]);
 			} finally {
 				setLoading(false);

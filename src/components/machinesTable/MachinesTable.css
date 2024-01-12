@@ -30,7 +30,7 @@
 	background: var(--clr-primary-font);
 }
 
-.machines_table__emptyResult {
+.machines_table__empty_result {
 	display: flex;
 	align-items: center;
 	justify-content: center;
