@@ -8,7 +8,7 @@ function MachineDetailPage() {
 	const { searchResult, loading } = useGetMachine(id);
 	return (
 		<main className='main_container'>
-			{loading ? <Loader /> : <MachineDetail searchResult={searchResult} />}
+			{loading ? <Loader /> : <MachineDetail machine={searchResult} />}
 		</main>
 	);
 }

@@ -6,7 +6,6 @@
 	max-width: 1200px;
 	min-height: 280px;
 	max-height: 900px;
-	padding: 0px 6px 0px 0px;
 	border-radius: 6px;
 	overflow-y: auto;
 	background: var(--clr-white);
@@ -23,4 +22,23 @@
 	font-size: 1.8rem;
 	text-align: center;
 	transition: all ease 0.2s;
+}
+
+.machine_detail__description {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 2.4rem;
+	padding: 40px;
+	border-bottom: 2px solid var(--clr-background);
+}
+
+.machine_detail__description__id {
+	color: var(--clr-secondary-font);
+}
+
+.machine_detail__details_container {
+	display: flex;
+	padding: 40px;
 }

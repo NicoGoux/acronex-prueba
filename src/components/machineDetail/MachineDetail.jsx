@@ -1,15 +1,23 @@
 import './MachineDetail.css';
+import MachineIndicatorContainer from './machineIndicatorContainer/MachineIndicatorContainer';
 
-function MachineDetail({ searchResult }) {
+function MachineDetail({ machine }) {
+	console.log(machine);
 	return (
 		<div className='machine_detail'>
-			{!searchResult ? (
+			{!machine ? (
 				<div className='machine_detail__empty_result'>
 					<p>No se encontro la máquina con el id especificado</p>
 				</div>
 			) : (
 				<>
-					<p>{searchResult.id}</p>
+					<div className='machine_detail__description'>
+						<p>{machine.description}</p>
+						<p className='machine_detail__description__id'>{machine.id}</p>
+					</div>
+					<div className='machine_detail__details_container'>
+						<MachineIndicatorContainer machine={machine} />
+					</div>
 				</>
 			)}
 		</div>

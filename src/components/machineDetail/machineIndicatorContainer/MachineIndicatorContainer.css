@@ -1,0 +1,8 @@
+.machine_detail__indicators_container {
+	display: grid;
+	max-width: 400px;
+	height: fit-content;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}

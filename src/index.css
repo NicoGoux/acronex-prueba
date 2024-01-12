@@ -7,6 +7,12 @@
 	--clr-background: #e4e4e4;
 	--clr-state-stoped: #e13e5b;
 	--clr-state-moving: #278e06;
+	--clr-indicator-1: #008000;
+	--clr-indicator-2: #ffff00;
+	--clr-indicator-3: #ffa500;
+	--clr-indicator-4: #ff0000;
+	--clr-indicator-5: #8b0000;
+	--clr-indicator-6: #8b0000;
 }
 
 * {
