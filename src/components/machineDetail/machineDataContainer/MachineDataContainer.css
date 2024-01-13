@@ -1,0 +1,32 @@
+.machine_data__container {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	font-size: 1.8rem;
+}
+
+.machine_data__subtitle {
+	margin-bottom: 4px;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+.machine_data__company {
+	color: var(--clr-link);
+}
+
+.machine_data__state {
+	display: flex;
+	gap: 8px;
+}
+
+.machine_data__state_circle {
+	min-width: 25px;
+	min-height: 25px;
+	border-radius: 50%;
+	background-color: var(--clr-state-stoped);
+}
+
+.machine_data__state_circle--active {
+	background-color: var(--clr-state-moving);
+}

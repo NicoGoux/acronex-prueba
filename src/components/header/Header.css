@@ -1,0 +1,9 @@
+.header {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 50px;
+	grid-column-gap: 5px;
+	align-items: center;
+	background-color: var(--clr-header);
+	padding: 0 30px;
+}

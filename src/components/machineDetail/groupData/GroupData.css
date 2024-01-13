@@ -1,0 +1,19 @@
+.group {
+	width: 100%;
+	border: 1px solid var(--clr-background);
+	font-size: 1.8rem;
+}
+
+.group__name {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 40px;
+	background-color: var(--clr-background);
+	font-weight: bold;
+}
+
+.group__values_container {
+	padding: 12px 0px;
+}

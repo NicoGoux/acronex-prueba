@@ -1,0 +1,8 @@
+.groups_container {
+	width: 100%;
+	min-width: 450px;
+	max-width: 550px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
