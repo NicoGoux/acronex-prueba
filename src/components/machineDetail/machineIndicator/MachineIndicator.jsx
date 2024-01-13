@@ -8,7 +8,7 @@ function MachineIndicator({ indicatorKey, indicatorHeader, value }) {
 	else if (value <= 0.5) backgroundColorClass = 'background_4';
 	else backgroundColorClass = 'background_5';
 
-	if (value && indicatorKey == 'ig') {
+	if (value != 0 && value && indicatorKey == 'ig') {
 		value = (1 - value).toFixed(2);
 	}
 
@@ -16,7 +16,7 @@ function MachineIndicator({ indicatorKey, indicatorHeader, value }) {
 		<div className={`machine_indicator ${backgroundColorClass}`}>
 			<p>{indicatorHeader.n}</p>
 			<p className='machine_indicator__value'>
-				{!value ? '-' : `${value * 100} ${indicatorHeader.u}`}
+				{value != 0 && !value ? '-' : `${value * 100} ${indicatorHeader.u}`}
 			</p>
 		</div>
 	);

@@ -2,7 +2,6 @@
 	grid-area: 1 / 2 / 2 / 6;
 	justify-self: center;
 	position: relative;
-	display: flex;
 	width: 100%;
 	max-width: 800px;
 	height: fit-content;

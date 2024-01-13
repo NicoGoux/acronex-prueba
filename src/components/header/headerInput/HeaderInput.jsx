@@ -1,6 +1,6 @@
 import { useRef } from 'react';
-import './HeaderInput.css';
 import { useNavigate } from 'react-router-dom';
+import './HeaderInput.css';
 
 function HeaderInput() {
 	const navigate = useNavigate();

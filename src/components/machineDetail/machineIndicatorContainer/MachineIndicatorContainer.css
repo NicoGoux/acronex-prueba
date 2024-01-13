@@ -1,8 +1,13 @@
 .machine_detail__indicators_container {
-	display: grid;
-	max-width: 400px;
 	height: fit-content;
+	max-width: 400px;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 12px;
+}
+
+@media (max-width: 770px) {
+	.machine_detail__indicators_container {
+		justify-content: center;
+	}
 }

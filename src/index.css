@@ -13,6 +13,7 @@
 	--clr-indicator-4: #ff0000;
 	--clr-indicator-5: #8b0000;
 	--clr-indicator-6: #8b0000;
+	--clr-link: #3366bb;
 }
 
 * {
@@ -40,4 +41,15 @@ html {
 	margin: 50px 20px;
 	justify-content: center;
 	height: 100%;
+}
+
+@media (max-width: 500px) {
+	html {
+		width: fit-content;
+	}
+
+	.main_container {
+		display: block;
+		margin: 20px 0px;
+	}
 }

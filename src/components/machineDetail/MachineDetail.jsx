@@ -1,8 +1,8 @@
+import { MachineGroupsContainer } from './machineGroupsContainer/machineGroupsContainer';
+import { MachineDataContainer } from './machineDataContainer/MachineDataContainer';
 import './MachineDetail.css';
-import MachineIndicatorContainer from './machineIndicatorContainer/MachineIndicatorContainer';
 
 function MachineDetail({ machine }) {
-	console.log(machine);
 	return (
 		<div className='machine_detail'>
 			{!machine ? (
@@ -15,8 +15,9 @@ function MachineDetail({ machine }) {
 						<p>{machine.description}</p>
 						<p className='machine_detail__description__id'>{machine.id}</p>
 					</div>
-					<div className='machine_detail__details_container'>
-						<MachineIndicatorContainer machine={machine} />
+					<div className='machine_detail__container'>
+						<MachineDataContainer machine={machine} />
+						<MachineGroupsContainer machine={machine} />
 					</div>
 				</>
 			)}
