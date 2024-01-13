@@ -17,6 +17,8 @@ function getGroupsData(machine) {
 	const headers = machine.data_description.headers;
 	const lastData = machine.last;
 	const groupsWithData = [];
+
+	console.log(lastData);
 	for (const groupKey in groups) {
 		/**
 		 * No se considera el grupo 3 (indicadores)
