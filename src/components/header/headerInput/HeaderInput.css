@@ -21,6 +21,10 @@
 	border: 1px solid var(--clr-secondary-font);
 }
 
+.header__input--searched {
+	color: var(--clr-secondary-font);
+}
+
 .header__input__search_icon {
 	position: absolute;
 	right: 8px;
