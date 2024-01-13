@@ -26,7 +26,7 @@ function useGetMachine(id) {
 
 				/**
 				 * getGroupsData procesara los resultados obtenidos y asociara
-				 *
+				 * cada grupo no vacio con su correspondientes ultimos valores
 				 */
 				const machine = { ...result, groupsData: getGroupsData(result) };
 
@@ -52,50 +52,67 @@ function getGroupsData(machine) {
 	const groupsWithData = [];
 
 	for (const groupKey in groups) {
-		/**
-		 * No se considera el grupo 3 (indicadores)
-		 */
-		if (groupKey != 3) {
-			const headersForGroup = [];
-			for (const headerKey in headers) {
-				/**
-				 * Se considero que los headers que no incluyen el atributo g
-				 * pertenecen al grupo general (por ejemplo, la bateria interna
-				 * se muestra asi en el diseño)
-				 */
-				if (groupKey == 0) {
-					if (
-						(headers[headerKey].g == 0 || !headers[headerKey].g) &&
-						lastData[headerKey]
-					) {
-						headersForGroup.push({
-							headerKey: headerKey,
-							headerName: headers[headerKey].n,
-							headerUnity: headers[headerKey].u,
-							headerHidden: headers[headerKey].h,
-							lastValue: lastData[headerKey],
-						});
-					}
-				} else if (headers[headerKey].g == groupKey && lastData[headerKey]) {
-					headersForGroup.push({
-						headerKey: headerKey,
-						headerName: headers[headerKey].n,
-						headerUnity: headers[headerKey].u,
-						headerHidden: headers[headerKey].h,
-						lastValue: lastData[headerKey],
-					});
-				}
-			}
-			if (headersForGroup.length != 0) {
-				groupsWithData.push({
-					groupKey: groupKey,
-					groupName: groups[groupKey],
-					headers: headersForGroup,
-				});
-			}
+		const headersForGroup = getHeadersForGroup(headers, lastData, groupKey);
+
+		if (headersForGroup.length != 0) {
+			groupsWithData.push({
+				groupKey: groupKey,
+				groupName: groups[groupKey],
+				headers: headersForGroup,
+			});
 		}
 	}
 	return groupsWithData;
+}
+
+function getHeadersForGroup(headers, lastData, groupKey) {
+	const headersForGroup = [];
+	const lastDataKeys = Object.keys(lastData);
+
+	for (const headerKey in headers) {
+		const header = headers[headerKey];
+		const lastValue = lastData[headerKey];
+		/**
+		 * Se considero que los headers que no incluyen el atributo g
+		 * pertenecen al grupo general (por ejemplo, la bateria interna
+		 * se muestra asi en el diseño)
+		 */
+
+		switch (groupKey) {
+			case '0':
+				if (lastDataKeys.includes(headerKey) && (header.g == 0 || !header.g)) {
+					headersForGroup.push(headerWithValue(headerKey, header, lastValue));
+				}
+				break;
+			case '3':
+				if (
+					header.g == groupKey &&
+					/**
+					 * Se consideran solo los indicadores indicados para pulverizadoras
+					 */
+					['it', 'ie', 'id', 'ig'].includes(headerKey)
+				) {
+					headersForGroup.push(headerWithValue(headerKey, header, lastValue));
+				}
+				break;
+
+			default:
+				if (header.g == groupKey && lastDataKeys.includes(headerKey)) {
+					headersForGroup.push(headerWithValue(headerKey, header, lastValue));
+				}
+		}
+	}
+	return headersForGroup;
+}
+
+function headerWithValue(headerKey, header, lastValue) {
+	return {
+		headerKey: headerKey,
+		headerName: header.n,
+		headerUnity: header.u,
+		headerHidden: header.h,
+		lastValue: !lastValue && lastValue != 0 ? '-' : lastValue,
+	};
 }
 
 export { useGetMachine };

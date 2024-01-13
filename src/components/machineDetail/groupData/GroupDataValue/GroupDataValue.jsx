@@ -16,7 +16,7 @@ function GroupDataValue({ header }) {
 						{Array.isArray(header.lastValue)
 							? `${header.lastValue.join(' ')}`
 							: header.lastValue}{' '}
-						{header.headerUnity}
+						{header.lastValue != '-' && header.headerUnity}
 					</>
 				)}
 			</p>

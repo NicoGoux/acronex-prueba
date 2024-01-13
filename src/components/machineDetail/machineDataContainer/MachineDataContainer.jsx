@@ -2,7 +2,12 @@ import { MachineIndicatorContainer } from '../machineIndicatorContainer/MachineI
 import './MachineDataContainer.css';
 
 function MachineDataContainer({ machine }) {
+	/**
+	 * Se obtiene el grupo de indicadores
+	 */
+	const indicators = machine.groupsData.find((group) => group.groupKey == '3');
 	const date = new Date(machine.last_update);
+
 	/**
 	 * Constructor para el string de fecha a partir de la fecha ISO
 	 */
@@ -12,7 +17,7 @@ function MachineDataContainer({ machine }) {
 
 	return (
 		<section className='machine_data__container'>
-			<MachineIndicatorContainer machine={machine} />
+			<MachineIndicatorContainer indicators={indicators} />
 			<div>
 				<p className='machine_data__subtitle'>Empresa</p>
 				<p className='machine_data__company'>{machine.company}</p>
