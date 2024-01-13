@@ -24,14 +24,7 @@ function useGetMachines(queryParams) {
 				}
 
 				const results = await response.json();
-				/**
-				 * En caso de que se busque por un id especifico se devolvera un objeto como si estuviera
-				 * consultandose al endpoint /acronex/:id. Se tomo la decision de, si se presenta este caso,
-				 * colocar el objeto dentro de un array vacio para que sea mostrado en la tabla de maquinas
-				 * como si se tratara de un filtrado por descripcion.
-				 */
-				const searchResults = Array.isArray(results) ? results : [results];
-				setSearchResults(searchResults);
+				setSearchResults(results);
 			} catch (error) {
 				console.log(error);
 				console.error('No se encontraton máquinas con la descripción ingresada');
