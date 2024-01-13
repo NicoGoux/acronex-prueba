@@ -28,4 +28,4 @@ function MachineIndicatorContainer({ machine }) {
 	);
 }
 
-export default MachineIndicatorContainer;
+export { MachineIndicatorContainer };

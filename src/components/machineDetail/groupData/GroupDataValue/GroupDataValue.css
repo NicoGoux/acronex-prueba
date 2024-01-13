@@ -1,0 +1,19 @@
+.group__header_value_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 60px;
+}
+
+.group__header_value_container--hidden {
+	display: none;
+}
+
+.group__header_value_container p {
+	width: 100%;
+}
+
+.group__header {
+	margin: 4px 0;
+	text-align: right;
+}

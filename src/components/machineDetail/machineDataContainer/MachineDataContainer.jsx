@@ -1,4 +1,4 @@
-import MachineIndicatorContainer from '../machineIndicatorContainer/MachineIndicatorContainer';
+import { MachineIndicatorContainer } from '../machineIndicatorContainer/MachineIndicatorContainer';
 import './MachineDataContainer.css';
 
 function MachineDataContainer({ machine }) {
