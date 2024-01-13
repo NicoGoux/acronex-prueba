@@ -2,11 +2,9 @@
 
 Prueba tecnica - Acronex. A continuación se mencionan los pasos para inicializar localmente el proyecto.
 
-## Comenzando
+## Instalación
 
 Sigue estas instrucciones para obtener una copia del proyecto.
-
-### Instalación
 
 1. Instala git en tu computadora.
 
