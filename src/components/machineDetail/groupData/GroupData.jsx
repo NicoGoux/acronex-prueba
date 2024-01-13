@@ -11,7 +11,8 @@ function GroupData({ group }) {
 						<p>
 							{Array.isArray(header.lastValue)
 								? `${header.lastValue.join(' ')}`
-								: header.lastValue}
+								: header.lastValue}{' '}
+							{header.headerUnity}
 						</p>
 					</div>
 				))}

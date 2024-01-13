@@ -37,6 +37,7 @@ function getGroupsData(machine) {
 						headersForGroup.push({
 							headerKey: headerKey,
 							headerName: headers[headerKey].n,
+							headerUnity: headers[headerKey].u,
 							lastValue: lastData[headerKey],
 						});
 					}
@@ -48,6 +49,7 @@ function getGroupsData(machine) {
 					headersForGroup.push({
 						headerKey: headerKey,
 						headerName: headers[headerKey].n,
+						headerUnity: headers[headerKey].u,
 						lastValue: lastData[headerKey],
 					});
 				}

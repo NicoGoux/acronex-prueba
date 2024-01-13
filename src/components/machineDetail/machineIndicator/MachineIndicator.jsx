@@ -16,7 +16,9 @@ function MachineIndicator({ indicatorKey, indicatorHeader, value }) {
 		<div className={`machine_indicator ${backgroundColorClass}`}>
 			<p>{indicatorHeader.n}</p>
 			<p className='machine_indicator__value'>
-				{value != 0 && !value ? '-' : `${value * 100} ${indicatorHeader.u}`}
+				{value != 0 && !value
+					? '-'
+					: `${Number.parseInt(value * 100)} ${indicatorHeader.u}`}
 			</p>
 		</div>
 	);
