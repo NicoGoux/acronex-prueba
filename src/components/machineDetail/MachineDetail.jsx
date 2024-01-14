@@ -1,4 +1,4 @@
-import { MachineGroupsContainer } from './machineGroupsContainer/machineGroupsContainer';
+import { MachineGroupsContainer } from './machineGroupsContainer/MachineGroupsContainer';
 import { MachineDataContainer } from './machineDataContainer/MachineDataContainer';
 import './MachineDetail.css';
 
